@@ -7,9 +7,63 @@
     <title>Gallery | Seven Six Pressure Washing LLC</title>
     <link rel="stylesheet" href="styles.css?v=20260911h">
     <style>
+      .gallery-page {
+        aspect-ratio: auto;
+        min-height: 100vh;
+        overflow: visible;
+        padding-bottom: 18px;
+      }
+
+      .gallery-page > .page-art {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .gallery-page .g-logo,
+      .gallery-page .g-home,
+      .gallery-page .g-gallery,
+      .gallery-page .g-quote,
+      .gallery-page .g-phone {
+        height: calc(min(100vw, 760px) * 0.1152);
+      }
+
+      .gallery-page .gallery-filters {
+        top: calc(min(100vw, 760px) * 0.3748);
+        height: calc(min(100vw, 760px) * 0.0626);
+      }
+
       .real-gallery-grid {
+        position: relative;
+        z-index: 20;
+        left: auto;
+        top: auto;
+        width: 95.7%;
+        height: auto;
+        margin: calc(min(100vw, 760px) * 0.4536) auto 0;
+        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(6, minmax(0, 1fr));
+        grid-template-rows: none;
+        grid-auto-rows: clamp(230px, 67vw, 500px);
+        gap: 8px;
+        padding: 4px;
+        background: #001426;
+      }
+
+      .gallery-card img,
+      .gallery-card.portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      @media (min-width: 760px) {
+        .real-gallery-grid {
+          grid-auto-rows: 500px;
+        }
       }
     </style>
   </head>
@@ -41,10 +95,7 @@
           <img src="assets/gallery/house-gable-after.webp" width="1560" height="1170" alt="House siding after pressure washing" decoding="async">
           <span class="gallery-label after">After</span>
         </button>
-        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View pressure washing in progress">
-          <img src="assets/gallery/washing-in-progress.webp" width="1170" height="1560" alt="Pressure washing a house in progress" decoding="async">
-          <span class="gallery-label progress">In Progress</span>
-        </button>
+
         <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View downspout before cleaning">
           <img src="assets/gallery/downspout-before.webp" width="1170" height="1560" alt="House siding and downspout before cleaning" loading="lazy" decoding="async">
           <span class="gallery-label before">Before</span>
@@ -53,32 +104,40 @@
           <img src="assets/gallery/downspout-after.webp" width="1170" height="1560" alt="House siding and downspout after cleaning" loading="lazy" decoding="async">
           <span class="gallery-label after">After</span>
         </button>
+
         <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View two-story siding before cleaning">
           <img src="assets/gallery/house-side-before.webp" width="1560" height="1170" alt="Two-story house siding before pressure washing" loading="lazy" decoding="async">
-          <span class="gallery-label before">Before</span>
-        </button>
-        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View front siding before cleaning">
-          <img src="assets/gallery/house-front-before.webp" width="1560" height="1170" alt="Front of house before pressure washing" loading="lazy" decoding="async">
-          <span class="gallery-label before">Before</span>
-        </button>
-        <button class="gallery-card portrait" type="button" data-category="sidewalks" aria-label="View walkway before cleaning">
-          <img src="assets/gallery/walkway-before.webp" width="1170" height="1560" alt="Concrete walkway before pressure washing" loading="lazy" decoding="async">
           <span class="gallery-label before">Before</span>
         </button>
         <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View two-story siding after cleaning">
           <img src="assets/gallery/house-side-after.webp" width="1170" height="1560" alt="Two-story house siding after pressure washing" loading="lazy" decoding="async">
           <span class="gallery-label after">After</span>
         </button>
+
+        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View front siding before cleaning">
+          <img src="assets/gallery/house-front-before.webp" width="1560" height="1170" alt="Front of house before pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
         <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View front siding after cleaning">
           <img src="assets/gallery/house-front-after.webp" width="1170" height="1560" alt="Front of house after pressure washing" loading="lazy" decoding="async">
           <span class="gallery-label after">After</span>
         </button>
-        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View clean house corner">
-          <img src="assets/gallery/house-corner-after.webp" width="1170" height="1560" alt="House corner and siding after pressure washing" loading="lazy" decoding="async">
-          <span class="gallery-label after">After</span>
+
+        <button class="gallery-card portrait" type="button" data-category="sidewalks" aria-label="View walkway before cleaning">
+          <img src="assets/gallery/walkway-before.webp" width="1170" height="1560" alt="Concrete walkway before pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
         </button>
         <button class="gallery-card portrait" type="button" data-category="sidewalks" aria-label="View walkway after cleaning">
           <img src="assets/gallery/walkway-after.webp" width="1170" height="1560" alt="Concrete walkway after pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View pressure washing in progress">
+          <img src="assets/gallery/washing-in-progress.webp" width="1170" height="1560" alt="Pressure washing a house in progress" loading="lazy" decoding="async">
+          <span class="gallery-label progress">In Progress</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View clean house corner">
+          <img src="assets/gallery/house-corner-after.webp" width="1170" height="1560" alt="House corner and siding after pressure washing" loading="lazy" decoding="async">
           <span class="gallery-label after">After</span>
         </button>
       </section>
