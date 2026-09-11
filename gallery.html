@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="See pressure-washing results from Seven Six Pressure Washing LLC.">
     <title>Gallery | Seven Six Pressure Washing LLC</title>
-    <link rel="stylesheet" href="styles.css?v=20260911c">
+    <link rel="stylesheet" href="styles.css?v=20260911g">
   </head>
   <body>
     <main class="page-shell gallery-page">
@@ -26,15 +26,63 @@
         <button class="gallery-filter" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
       </div>
 
-      <div class="gallery-card gc-1" data-category="houses" aria-hidden="true"></div>
-      <div class="gallery-card gc-2" data-category="sidewalks" aria-hidden="true"></div>
-      <div class="gallery-card gc-3" data-category="patios" aria-hidden="true"></div>
-      <div class="gallery-card gc-4" data-category="sidewalks" aria-hidden="true"></div>
-      <div class="gallery-card gc-5" data-category="houses" aria-hidden="true"></div>
-      <div class="gallery-card gc-6" data-category="commercial" aria-hidden="true"></div>
-      <div class="gallery-card gc-7" data-category="driveways" aria-hidden="true"></div>
-      <div class="gallery-card gc-8" data-category="patios" aria-hidden="true"></div>
+      <section class="real-gallery-grid" aria-label="Recent pressure-washing projects">
+        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View house siding before cleaning">
+          <img src="assets/gallery/house-gable-before.webp" width="1560" height="1170" alt="House siding before pressure washing" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
+        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View house siding after cleaning">
+          <img src="assets/gallery/house-gable-after.webp" width="1560" height="1170" alt="House siding after pressure washing" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View pressure washing in progress">
+          <img src="assets/gallery/washing-in-progress.webp" width="1170" height="1560" alt="Pressure washing a house in progress" decoding="async">
+          <span class="gallery-label progress">In Progress</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View downspout before cleaning">
+          <img src="assets/gallery/downspout-before.webp" width="1170" height="1560" alt="House siding and downspout before cleaning" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View downspout after cleaning">
+          <img src="assets/gallery/downspout-after.webp" width="1170" height="1560" alt="House siding and downspout after cleaning" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View two-story siding before cleaning">
+          <img src="assets/gallery/house-side-before.webp" width="1560" height="1170" alt="Two-story house siding before pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
+        <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View front siding before cleaning">
+          <img src="assets/gallery/house-front-before.webp" width="1560" height="1170" alt="Front of house before pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="sidewalks" aria-label="View walkway before cleaning">
+          <img src="assets/gallery/walkway-before.webp" width="1170" height="1560" alt="Concrete walkway before pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label before">Before</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View two-story siding after cleaning">
+          <img src="assets/gallery/house-side-after.webp" width="1170" height="1560" alt="Two-story house siding after pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View front siding after cleaning">
+          <img src="assets/gallery/house-front-after.webp" width="1170" height="1560" alt="Front of house after pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="houses" aria-label="View clean house corner">
+          <img src="assets/gallery/house-corner-after.webp" width="1170" height="1560" alt="House corner and siding after pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+        <button class="gallery-card portrait" type="button" data-category="sidewalks" aria-label="View walkway after cleaning">
+          <img src="assets/gallery/walkway-after.webp" width="1170" height="1560" alt="Concrete walkway after pressure washing" loading="lazy" decoding="async">
+          <span class="gallery-label after">After</span>
+        </button>
+      </section>
+
+      <dialog id="galleryLightbox" class="gallery-lightbox" aria-label="Gallery photo viewer">
+        <button class="gallery-lightbox-close" type="button" aria-label="Close photo viewer">&times;</button>
+        <img id="galleryLightboxImage" alt="">
+        <p id="galleryLightboxCaption"></p>
+      </dialog>
     </main>
-    <script src="script.js?v=20260911b"></script>
+    <script src="script.js?v=20260911g"></script>
   </body>
 </html>

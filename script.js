@@ -17,11 +17,39 @@ galleryFilters.forEach((button) => {
     });
 
     galleryCards.forEach((card) => {
-      const shouldDim = selected !== 'all' && card.dataset.category !== selected;
+      const categories = (card.dataset.category || '').split(/\s+/);
+      const shouldDim = selected !== 'all' && !categories.includes(selected);
       card.classList.toggle('dimmed', shouldDim);
     });
   });
 });
+
+const galleryLightbox = document.getElementById('galleryLightbox');
+
+if (galleryLightbox) {
+  const galleryLightboxImage = document.getElementById('galleryLightboxImage');
+  const galleryLightboxCaption = document.getElementById('galleryLightboxCaption');
+  const galleryLightboxClose = galleryLightbox.querySelector('.gallery-lightbox-close');
+
+  galleryCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const photo = card.querySelector('img');
+
+      if (!photo) return;
+
+      galleryLightboxImage.src = photo.currentSrc || photo.src;
+      galleryLightboxImage.alt = photo.alt;
+      galleryLightboxCaption.textContent = photo.alt;
+      galleryLightbox.showModal();
+    });
+  });
+
+  galleryLightboxClose.addEventListener('click', () => galleryLightbox.close());
+
+  galleryLightbox.addEventListener('click', (event) => {
+    if (event.target === galleryLightbox) galleryLightbox.close();
+  });
+}
 
 const form = document.getElementById('quoteForm');
 
