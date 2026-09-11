@@ -1,1 +1,86 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Get a Quote | Seven Six Pressure Washing LLC</title><link rel="stylesheet" href="styles.css"></head><body><main class="page-shell quote-page"><img class="page-art" src="https://raw.githubusercontent.com/cm5wxjmcpv-bit/Seven-six/main/assets/quote.webp" alt="Seven Six Pressure Washing quote page"><a class="hotspot q-logo" href="index.html" aria-label="Home"></a><a class="hotspot q-home" href="index.html" aria-label="Home"></a><a class="hotspot q-gallery" href="gallery.html" aria-label="Gallery"></a><a class="hotspot q-quote" href="quote.html" aria-label="Get a Quote"></a><a class="hotspot q-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a><a class="hotspot q-contact-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a><a class="hotspot q-email" href="mailto:76pressurewashing@gmail.com" aria-label="Email Seven Six Pressure Washing"></a><div class="hours-cover" aria-hidden="true"></div><form id="quoteForm" class="overlay-form"><label class="sr-only" for="name">Full name</label><input id="name" class="qf qf-name" name="name" placeholder="Full Name *" required><label class="sr-only" for="phone">Phone number</label><input id="phone" class="qf qf-phone" name="phone" type="tel" placeholder="Phone Number *" required><label class="sr-only" for="email">Email address</label><input id="email" class="qf qf-email" name="email" type="email" placeholder="Email Address"><label class="sr-only" for="address">Property address</label><input id="address" class="qf qf-address" name="address" placeholder="Property Address *" required><label class="sr-only" for="propertyType">Property type</label><select id="propertyType" class="qf qf-type" name="propertyType" required><option value="">Select One</option><option>Residential</option><option>Commercial</option><option>Other</option></select><label class="sr-only" for="squareFeet">Square footage</label><input id="squareFeet" class="qf qf-sqft" name="squareFeet" type="number" min="0" placeholder="Square Footage (if known)"><div class="q-checks"><label><input type="checkbox" name="services" value="House Washing"> House Washing</label><label><input type="checkbox" name="services" value="Gutter Cleaning"> Gutter Cleaning</label><label><input type="checkbox" name="services" value="Driveway"> Driveway</label><label><input type="checkbox" name="services" value="Commercial"> Parking Lot / Commercial</label><label><input type="checkbox" name="services" value="Sidewalks"> Sidewalks</label><label><input type="checkbox" name="services" value="Other"> Other</label><label><input type="checkbox" name="services" value="Patio / Deck"> Patios / Decks</label></div><label class="sr-only" for="details">Additional details</label><textarea id="details" class="qf qf-details" name="details" placeholder="Tell us about your project..."></textarea><input type="hidden" name="contactMethod" value=""><input type="hidden" name="bestTime" value=""><button class="q-submit" type="submit" aria-label="Submit Request"></button><div id="status" class="q-status" aria-live="polite"></div></form><script src="script.js"></script></main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Request a free pressure-washing quote from Seven Six Pressure Washing LLC.">
+    <title>Get a Quote | Seven Six Pressure Washing LLC</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell quote-page">
+      <img class="page-art" src="assets/quote.webp" width="511" height="994" alt="Seven Six Pressure Washing quote page">
+
+      <a class="hotspot q-logo" href="index.html" aria-label="Seven Six Pressure Washing home"></a>
+      <a class="hotspot q-home" href="index.html" aria-label="Home"></a>
+      <a class="hotspot q-gallery" href="gallery.html" aria-label="Gallery"></a>
+      <a class="hotspot q-quote" href="quote.html" aria-label="Get a Quote" aria-current="page"></a>
+      <a class="hotspot q-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a>
+      <a class="hotspot q-contact-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a>
+      <a class="hotspot q-email" href="mailto:76pressurewashing@gmail.com" aria-label="Email 76pressurewashing@gmail.com"></a>
+
+      <div class="hours-cover" aria-hidden="true"></div>
+
+      <form id="quoteForm" class="overlay-form">
+        <label class="sr-only" for="name">Full name</label>
+        <input id="name" class="qf qf-name" name="name" autocomplete="name" placeholder="Full Name *" required>
+
+        <label class="sr-only" for="phone">Phone number</label>
+        <input id="phone" class="qf qf-phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone Number *" required>
+
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" class="qf qf-email" name="email" type="email" autocomplete="email" placeholder="Email Address">
+
+        <label class="sr-only" for="address">Property address</label>
+        <input id="address" class="qf qf-address" name="address" autocomplete="street-address" placeholder="Property Address *" required>
+
+        <label class="sr-only" for="propertyType">Property type</label>
+        <select id="propertyType" class="qf qf-type" name="propertyType" required>
+          <option value="">Select One</option>
+          <option>Residential</option>
+          <option>Commercial</option>
+          <option>Other</option>
+        </select>
+
+        <label class="sr-only" for="squareFeet">Square footage, if known</label>
+        <input id="squareFeet" class="qf qf-sqft" name="squareFeet" type="number" min="0" inputmode="numeric" placeholder="Square Footage (if known)">
+
+        <fieldset class="q-checks">
+          <legend class="sr-only">Services needed</legend>
+          <label><input type="checkbox" name="services" value="House Washing"> House Washing</label>
+          <label><input type="checkbox" name="services" value="Gutter Cleaning"> Gutter Cleaning</label>
+          <label><input type="checkbox" name="services" value="Driveway"> Driveway</label>
+          <label><input type="checkbox" name="services" value="Parking Lot / Commercial"> Parking Lot / Commercial</label>
+          <label><input type="checkbox" name="services" value="Sidewalks"> Sidewalks</label>
+          <label><input type="checkbox" name="services" value="Other"> Other</label>
+          <label><input type="checkbox" name="services" value="Patios / Decks"> Patios / Decks</label>
+        </fieldset>
+
+        <label class="sr-only" for="details">Additional details</label>
+        <textarea id="details" class="qf qf-details" name="details" placeholder="Tell us about your project..."></textarea>
+
+        <label class="sr-only" for="contactMethod">Preferred contact method</label>
+        <select id="contactMethod" class="qf qf-contact" name="contactMethod">
+          <option value="">Select One</option>
+          <option>Phone Call</option>
+          <option>Text Message</option>
+          <option>Email</option>
+        </select>
+
+        <label class="sr-only" for="bestTime">Best time to contact</label>
+        <select id="bestTime" class="qf qf-time" name="bestTime">
+          <option value="">Select One</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
+          <option>Anytime</option>
+        </select>
+
+        <button class="q-submit" type="submit" aria-label="Submit quote request"></button>
+        <div id="status" class="q-status" aria-live="polite"></div>
+      </form>
+
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
