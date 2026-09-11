@@ -5,35 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="See pressure-washing results from Seven Six Pressure Washing LLC.">
     <title>Gallery | Seven Six Pressure Washing LLC</title>
-    <link rel="stylesheet" href="styles.css?v=20260911h">
+    <link rel="stylesheet" href="styles.css?v=20260911i">
     <style>
       .gallery-page {
         aspect-ratio: auto;
         min-height: 100vh;
         overflow: visible;
         padding-bottom: 18px;
+        background: #001426;
       }
 
-      .gallery-page > .page-art {
+      .gallery-top {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 492 / 224;
+        overflow: hidden;
+        background: #001426;
+        line-height: 0;
+      }
+
+      .gallery-top .page-art {
         position: absolute;
         z-index: 0;
         top: 0;
         left: 0;
         width: 100%;
         height: auto;
+        object-fit: initial;
       }
 
-      .gallery-page .g-logo,
-      .gallery-page .g-home,
-      .gallery-page .g-gallery,
-      .gallery-page .g-quote,
-      .gallery-page .g-phone {
-        height: calc(min(100vw, 760px) * 0.1152);
+      .gallery-top .g-logo,
+      .gallery-top .g-home,
+      .gallery-top .g-gallery,
+      .gallery-top .g-quote,
+      .gallery-top .g-phone {
+        height: 25.3%;
       }
 
-      .gallery-page .gallery-filters {
-        top: calc(min(100vw, 760px) * 0.3748);
-        height: calc(min(100vw, 760px) * 0.0626);
+      .gallery-top .gallery-filters {
+        top: 82.3%;
+        height: 13.8%;
       }
 
       .real-gallery-grid {
@@ -43,14 +54,15 @@
         top: auto;
         width: 95.7%;
         height: auto;
-        margin: calc(min(100vw, 760px) * 0.4536) auto 0;
+        margin: 8px auto 0;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: none;
-        grid-auto-rows: clamp(230px, 67vw, 500px);
+        grid-auto-rows: clamp(250px, 66vw, 500px);
         gap: 8px;
         padding: 4px;
         background: #001426;
+        line-height: 1;
       }
 
       .gallery-card img,
@@ -69,22 +81,24 @@
   </head>
   <body>
     <main class="page-shell gallery-page">
-      <img class="page-art" src="assets/gallery.webp?v=20260911c" width="492" height="994" alt="Seven Six Pressure Washing before-and-after project gallery">
+      <section class="gallery-top" aria-label="Gallery header">
+        <img class="page-art" src="assets/gallery.webp?v=20260911c" width="492" height="994" alt="Seven Six Pressure Washing before-and-after project gallery">
 
-      <a class="hotspot g-logo" href="index.html" aria-label="Seven Six Pressure Washing home"></a>
-      <a class="hotspot g-home" href="index.html" aria-label="Home"></a>
-      <a class="hotspot g-gallery" href="gallery.html" aria-label="Gallery" aria-current="page"></a>
-      <a class="hotspot g-quote" href="quote.html" aria-label="Get a Quote"></a>
-      <a class="hotspot g-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a>
+        <a class="hotspot g-logo" href="index.html" aria-label="Seven Six Pressure Washing home"></a>
+        <a class="hotspot g-home" href="index.html" aria-label="Home"></a>
+        <a class="hotspot g-gallery" href="gallery.html" aria-label="Gallery" aria-current="page"></a>
+        <a class="hotspot g-quote" href="quote.html" aria-label="Get a Quote"></a>
+        <a class="hotspot g-phone" href="tel:+12766348064" aria-label="Call 276-634-8064"></a>
 
-      <div class="gallery-filters" role="group" aria-label="Filter gallery">
-        <button class="gallery-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="gallery-filter" type="button" data-filter="houses" aria-pressed="false">Houses</button>
-        <button class="gallery-filter" type="button" data-filter="driveways" aria-pressed="false">Driveways</button>
-        <button class="gallery-filter" type="button" data-filter="sidewalks" aria-pressed="false">Sidewalks</button>
-        <button class="gallery-filter" type="button" data-filter="patios" aria-pressed="false">Patios &amp; Decks</button>
-        <button class="gallery-filter" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
-      </div>
+        <div class="gallery-filters" role="group" aria-label="Filter gallery">
+          <button class="gallery-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="gallery-filter" type="button" data-filter="houses" aria-pressed="false">Houses</button>
+          <button class="gallery-filter" type="button" data-filter="driveways" aria-pressed="false">Driveways</button>
+          <button class="gallery-filter" type="button" data-filter="sidewalks" aria-pressed="false">Sidewalks</button>
+          <button class="gallery-filter" type="button" data-filter="patios" aria-pressed="false">Patios &amp; Decks</button>
+          <button class="gallery-filter" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+        </div>
+      </section>
 
       <section class="real-gallery-grid" aria-label="Recent pressure-washing projects">
         <button class="gallery-card landscape" type="button" data-category="houses" aria-label="View house siding before cleaning">
@@ -148,6 +162,6 @@
         <p id="galleryLightboxCaption"></p>
       </div>
     </main>
-    <script src="script.js?v=20260911h"></script>
+    <script src="script.js?v=20260911i"></script>
   </body>
 </html>
