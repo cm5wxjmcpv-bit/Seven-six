@@ -31,6 +31,12 @@ if (galleryLightbox) {
   const galleryLightboxCaption = document.getElementById('galleryLightboxCaption');
   const galleryLightboxClose = galleryLightbox.querySelector('.gallery-lightbox-close');
 
+  const closeGalleryLightbox = () => {
+    galleryLightbox.classList.remove('open');
+    galleryLightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('gallery-lightbox-open');
+  };
+
   galleryCards.forEach((card) => {
     card.addEventListener('click', () => {
       const photo = card.querySelector('img');
@@ -40,14 +46,23 @@ if (galleryLightbox) {
       galleryLightboxImage.src = photo.currentSrc || photo.src;
       galleryLightboxImage.alt = photo.alt;
       galleryLightboxCaption.textContent = photo.alt;
-      galleryLightbox.showModal();
+      galleryLightbox.classList.add('open');
+      galleryLightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('gallery-lightbox-open');
+      galleryLightboxClose.focus();
     });
   });
 
-  galleryLightboxClose.addEventListener('click', () => galleryLightbox.close());
+  galleryLightboxClose.addEventListener('click', closeGalleryLightbox);
 
   galleryLightbox.addEventListener('click', (event) => {
-    if (event.target === galleryLightbox) galleryLightbox.close();
+    if (event.target === galleryLightbox) closeGalleryLightbox();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && galleryLightbox.classList.contains('open')) {
+      closeGalleryLightbox();
+    }
   });
 }
 
