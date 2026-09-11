@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Request a free pressure-washing quote from Seven Six Pressure Washing LLC.">
     <title>Get a Quote | Seven Six Pressure Washing LLC</title>
-    <link rel="stylesheet" href="styles.css?v=20260911c">
+    <link rel="stylesheet" href="styles.css?v=20260911d">
   </head>
   <body>
     <main class="page-shell quote-page">
@@ -22,6 +22,9 @@
       <div class="hours-cover" aria-hidden="true"></div>
 
       <form id="quoteForm" class="overlay-form">
+        <label class="honeypot" for="website">Leave this field blank</label>
+        <input id="website" class="honeypot" name="website" type="text" tabindex="-1" autocomplete="off">
+
         <label class="sr-only" for="name">Full name</label>
         <input id="name" class="qf qf-name" name="name" autocomplete="name" placeholder="Full Name *" required>
 
@@ -59,6 +62,13 @@
         <label class="sr-only" for="details">Additional details</label>
         <textarea id="details" class="qf qf-details" name="details" placeholder="Tell us about your project..."></textarea>
 
+        <div class="photo-upload">
+          <div class="photo-title">PROJECT PHOTOS</div>
+          <input id="photos" class="photo-input" name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+          <label class="photo-button" for="photos">ADD PHOTOS</label>
+          <div id="photoSelection" class="photo-selection" aria-live="polite">Optional · up to 3 · 5 MB each</div>
+        </div>
+
         <label class="sr-only" for="contactMethod">Preferred contact method</label>
         <select id="contactMethod" class="qf qf-contact" name="contactMethod">
           <option value="">Select One</option>
@@ -80,7 +90,7 @@
         <div id="status" class="q-status" aria-live="polite"></div>
       </form>
 
-      <script src="script.js?v=20260911b"></script>
+      <script src="script.js?v=20260911d"></script>
     </main>
   </body>
 </html>

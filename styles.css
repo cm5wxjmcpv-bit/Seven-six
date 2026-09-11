@@ -56,6 +56,7 @@ body {
 .gallery-filter:focus-visible,
 .qf:focus-visible,
 .q-checks input:focus-visible,
+.photo-input:focus-visible + .photo-button,
 .q-submit:focus-visible {
   outline: 3px solid #fff;
   outline-offset: -3px;
@@ -162,6 +163,7 @@ body {
 
 .qf,
 .q-checks,
+.photo-upload,
 .q-submit,
 .q-status {
   position: absolute;
@@ -233,6 +235,69 @@ body {
   resize: none;
 }
 
+.photo-upload {
+  left: 58.25%;
+  top: 45.55%;
+  width: 39.65%;
+  min-height: 9.05%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 5%;
+  align-content: center;
+  padding: 4.5% 5%;
+  border: 1px solid rgba(154, 179, 203, 0.34);
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(5, 29, 52, 0.98), rgba(0, 13, 28, 0.99));
+  color: #fff;
+  text-align: center;
+}
+
+.photo-title {
+  font: 800 clamp(7px, 1.7vw, 12px) / 1 "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.photo-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.photo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(18px, 4.8vw, 34px);
+  border: 1px solid #ff4650;
+  border-radius: 3px;
+  background: linear-gradient(#f5222e, #d90815);
+  color: #fff;
+  font: 800 clamp(7px, 1.65vw, 12px) / 1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.photo-button:hover {
+  background: #ff2935;
+}
+
+.photo-selection {
+  min-height: 1em;
+  overflow: hidden;
+  color: #d8e6f2;
+  font-size: clamp(6px, 1.35vw, 10px);
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.photo-selection.error {
+  color: #ff7a82;
+  font-weight: 700;
+}
+
 .qf-contact { left: 3.65%; top: 73.6%; width: 24.7%; height: 2.85%; padding-right: 0.5%; }
 .qf-time { left: 30.2%; top: 73.6%; width: 22.65%; height: 2.85%; padding-right: 0.5%; }
 
@@ -283,6 +348,15 @@ body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @media (min-width: 761px) {
