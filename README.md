@@ -9,7 +9,7 @@ Static GitHub Pages website for Seven Six Pressure Washing LLC.
 3. Replace the editor contents with `apps-script.gs` from this repository.
 4. Run `setupQuoteSheet` once and approve the requested Sheets, Drive, and email permissions.
 5. Select **Deploy → New deployment → Web app**. Execute as yourself and allow access to anyone.
-6. Copy the deployed URL ending in `/exec` and paste it between the quotes in `const SCRIPT_URL = '';` at the top of `script.js`.
+6. Copy the deployed URL ending in `/exec` and set it as `SCRIPT_URL` at the top of `script.js`. The production deployment is already configured in this repository.
 7. Commit the updated `script.js`. GitHub Pages will publish the connected form.
 
 The script stores quote details on the `Quotes` tab, saves uploaded photos in a private Drive folder named `Seven Six Quote Photos`, records their Drive links, and attaches the photos to the notification email.

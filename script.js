@@ -1,4 +1,4 @@
-const SCRIPT_URL = '';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3hhJZ_sq1kF8YdTUGXdFatxnWy2fgAWeO3YwXRLTfC7cDrWSFHHYrTVApYUcgnhc/exec';
 const MAX_PHOTOS = 3;
 const MAX_PHOTO_SIZE = 5 * 1024 * 1024;
 const ALLOWED_PHOTO_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp']);
