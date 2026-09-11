@@ -56,7 +56,7 @@ if (form) {
   };
 
   const resetPhotoSelection = () => {
-    showPhotoSelection('Optional · up to 3 · 5 MB each');
+    showPhotoSelection('Up to 3 · 5 MB each');
   };
 
   photoInput.addEventListener('change', () => {
